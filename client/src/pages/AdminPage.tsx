@@ -192,7 +192,15 @@ const AdminPage: React.FC = () => {
 
 // Component to display contact form submissions
 const ContactMessagesList: React.FC = () => {
-  const { data: contactMessages, isLoading, error } = useQuery({
+  const { data: contactMessages, isLoading, error } = useQuery<Array<{
+    id: number;
+    name: string;
+    email: string;
+    phone: string;
+    service: string;
+    message: string;
+    createdAt: string;
+  }>>({
     queryKey: ["/api/contact"],
   });
   
@@ -202,7 +210,7 @@ const ContactMessagesList: React.FC = () => {
   return (
     <div className="space-y-4">
       {contactMessages && contactMessages.length > 0 ? (
-        contactMessages.map((message: any) => (
+        contactMessages.map((message) => (
           <Card key={message.id} className="overflow-hidden">
             <CardContent className="p-0">
               <div className="p-4 bg-secondary/10">

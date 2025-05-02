@@ -1,6 +1,6 @@
 import React from "react";
 import { TimelineEntry } from "@shared/schema";
-import { Icons } from "@/lib/icons";
+import { FaEdit, FaTrash } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -39,7 +39,7 @@ const TimelineEditor: React.FC<TimelineEditorProps> = ({
               onClick={() => onEdit(entry)}
               className="h-8 w-8 p-0"
             >
-              <Icons.Edit className="h-4 w-4" />
+              <FaEdit className="h-4 w-4" />
               <span className="sr-only">Editar</span>
             </Button>
             <Button 
@@ -48,7 +48,7 @@ const TimelineEditor: React.FC<TimelineEditorProps> = ({
               onClick={() => onDelete(entry.id)}
               className="h-8 w-8 p-0 text-destructive hover:text-destructive"
             >
-              <Icons.Trash className="h-4 w-4" />
+              <FaTrash className="h-4 w-4" />
               <span className="sr-only">Excluir</span>
             </Button>
           </div>
