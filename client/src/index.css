@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --primary: 24 100% 50%; /* #FF6600 */
+    --primary-foreground: 211 100% 99%;
+    --secondary: 225 100% 59%; /* #2D5BFF */
+    --secondary-foreground: 0 0% 98%;
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --ring: 20 14.3% 4.1%;
+    --radius: 0.5rem;
+    
+    /* Custom colors */
+    --dark: 210 11% 15%; /* #212529 */
+    --light: 210 17% 98%; /* #F8F9FA */
+    --light-gray: 210 16% 93%; /* #E9ECEF */
+    --dark-gray: 210 10% 23%; /* #343A40 */
+    
+    /* Chart colors */
+    --chart-1: 24 100% 50%;
+    --chart-2: 225 100% 59%;
+    --chart-3: 210 11% 15%;
+    --chart-4: 210 10% 23%;
+    --chart-5: 210 16% 93%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --primary: 24 100% 50%;
+    --primary-foreground: 211 100% 99%;
+    --secondary: 225 100% 59%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-body antialiased bg-[#F8F9FA] text-[#343A40];
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+/* Timeline styles */
+.timeline-container {
+  position: relative;
+}
+
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #E9ECEF;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 10px 40px;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #FF6600;
+  border-radius: 50%;
+  top: 15px;
+  z-index: 1;
+}
+
+.timeline-left {
+  left: 0;
+}
+
+.timeline-right {
+  left: 50%;
+}
+
+.timeline-left::after {
+  right: -12px;
+}
+
+.timeline-right::after {
+  left: -12px;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline-container::after {
+    left: 31px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .timeline-left::after, 
+  .timeline-right::after {
+    left: 19px;
+  }
+  
+  .timeline-right {
+    left: 0;
+  }
+}

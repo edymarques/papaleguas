@@ -1,0 +1,74 @@
+import React from "react";
+import { Icons } from "@/lib/icons";
+
+const services = [
+  {
+    id: 1,
+    icon: <Icons.Home className="text-3xl text-primary" />,
+    title: "Mudanças Residenciais",
+    description: "Realizamos mudanças residenciais com total segurança e agilidade, garantindo o cuidado com seus pertences."
+  },
+  {
+    id: 2,
+    icon: <Icons.Building className="text-3xl text-primary" />,
+    title: "Mudanças Comerciais",
+    description: "Escritórios e empresas podem contar com nossa equipe para uma mudança eficiente e com mínima interrupção."
+  },
+  {
+    id: 3,
+    icon: <Icons.Box className="text-3xl text-primary" />,
+    title: "Embalagem e Desmontagem",
+    description: "Oferecemos serviços de embalagem, desmontagem e montagem de móveis para garantir a segurança dos seus itens."
+  },
+  {
+    id: 4,
+    icon: <Icons.Truck className="text-3xl text-primary" />,
+    title: "Transporte de Longa Distância",
+    description: "Realizamos mudanças intermunicipais e interestaduais com segurança e pontualidade."
+  },
+  {
+    id: 5,
+    icon: <Icons.Shield className="text-3xl text-primary" />,
+    title: "Mudanças com Seguro",
+    description: "Oferecemos opções de seguro para suas mudanças, garantindo tranquilidade durante todo o processo."
+  },
+  {
+    id: 6,
+    icon: <Icons.Store className="text-3xl text-primary" />,
+    title: "Armazenamento Temporário",
+    description: "Disponibilizamos armazenamento seguro para seus pertences em caso de necessidade durante a mudança."
+  }
+];
+
+const ServicesSection: React.FC = () => {
+  return (
+    <section id="servicos" className="py-16 bg-[#F8F9FA]">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">Nossos Serviços</h2>
+          <p className="text-[#343A40] max-w-2xl mx-auto">
+            Oferecemos soluções completas para todos os tipos de mudanças, atendendo às suas necessidades com profissionalismo e cuidado.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service) => (
+            <div key={service.id} className="bg-white rounded-lg shadow-md p-6 transition-transform hover:-translate-y-1">
+              <div className="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                {service.icon}
+              </div>
+              <h3 className="text-xl font-bold font-heading mb-3">{service.title}</h3>
+              <p className="text-[#343A40] mb-4">{service.description}</p>
+              <a href="#contato" className="text-primary font-medium hover:underline inline-flex items-center">
+                Saiba mais
+                <Icons.ArrowRight className="ml-1" />
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServicesSection;
