@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Icons } from "@/lib/icons";
+import { FaBars } from "react-icons/fa";
 import logoPath from "@assets/logo-horizontal.png";
 
 const Header: React.FC = () => {
@@ -74,7 +74,7 @@ const Header: React.FC = () => {
               className="text-dark focus:outline-none"
               aria-label="Toggle mobile menu"
             >
-              <Icons.Menu className="text-2xl" />
+              <FaBars className="text-2xl" />
             </button>
           </div>
         </div>
