@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Icons } from "@/lib/icons";
+import logoPath from "@assets/logo-horizontal.png";
 
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,10 +23,13 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
-              <div className="text-2xl font-bold text-primary font-heading flex items-center">
-                <Icons.Run className="text-3xl mr-2" />
-                <span>Papaléguas<span className="text-secondary">Mudanças</span></span>
-              </div>
+              <Link href="/">
+                <img 
+                  src={logoPath} 
+                  alt="Papaléguas Mudanças" 
+                  className="h-12" 
+                />
+              </Link>
             </div>
             <div className="flex items-center">
               <span className="mr-4 font-medium">Painel Administrativo</span>

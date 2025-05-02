@@ -14,9 +14,9 @@
     --card-foreground: 20 14.3% 4.1%;
     --border: 20 5.9% 90%;
     --input: 20 5.9% 90%;
-    --primary: 24 100% 50%; /* #FF6600 */
+    --primary: 289 43% 42%; /* #9C4D8F (roxo) */
     --primary-foreground: 211 100% 99%;
-    --secondary: 225 100% 59%; /* #2D5BFF */
+    --secondary: 16 100% 50%; /* #FF5500 (laranja) */
     --secondary-foreground: 0 0% 98%;
     --accent: 60 4.8% 95.9%;
     --accent-foreground: 24 9.8% 10%;
@@ -50,9 +50,9 @@
     --card-foreground: 0 0% 98%;
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --primary: 24 100% 50%;
+    --primary: 289 43% 42%; /* #9C4D8F (roxo) */
     --primary-foreground: 211 100% 99%;
-    --secondary: 225 100% 59%;
+    --secondary: 16 100% 50%; /* #FF5500 (laranja) */
     --secondary-foreground: 0 0% 98%;
     --accent: 240 3.7% 15.9%;
     --accent-foreground: 0 0% 98%;
@@ -103,7 +103,7 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  background-color: #FF6600;
+  background-color: #9C4D8F; /* Cor primária (roxo) */
   border-radius: 50%;
   top: 15px;
   z-index: 1;
