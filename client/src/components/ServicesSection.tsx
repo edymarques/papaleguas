@@ -1,40 +1,48 @@
 import React from "react";
 import { FaHome, FaBuilding, FaBox, FaTruck, FaShieldAlt, FaStore, FaArrowRight } from "react-icons/fa";
+import type { IconType } from "react-icons";
 
-const services = [
+interface ServiceItem {
+  id: number;
+  icon: IconType;
+  title: string;
+  description: string;
+}
+
+const services: ServiceItem[] = [
   {
     id: 1,
-    icon: <FaHome className="text-3xl text-primary" />,
+    icon: FaHome,
     title: "Mudanças Residenciais",
     description: "Realizamos mudanças residenciais com total segurança e agilidade, garantindo o cuidado com seus pertences."
   },
   {
     id: 2,
-    icon: <FaBuilding className="text-3xl text-primary" />,
+    icon: FaBuilding,
     title: "Mudanças Comerciais",
     description: "Escritórios e empresas podem contar com nossa equipe para uma mudança eficiente e com mínima interrupção."
   },
   {
     id: 3,
-    icon: <FaBox className="text-3xl text-primary" />,
+    icon: FaBox,
     title: "Embalagem e Desmontagem",
     description: "Oferecemos serviços de embalagem, desmontagem e montagem de móveis para garantir a segurança dos seus itens."
   },
   {
     id: 4,
-    icon: <FaTruck className="text-3xl text-primary" />,
+    icon: FaTruck,
     title: "Transporte de Longa Distância",
     description: "Realizamos mudanças intermunicipais e interestaduais com segurança e pontualidade."
   },
   {
     id: 5,
-    icon: <FaShieldAlt className="text-3xl text-primary" />,
+    icon: FaShieldAlt,
     title: "Mudanças com Seguro",
     description: "Oferecemos opções de seguro para suas mudanças, garantindo tranquilidade durante todo o processo."
   },
   {
     id: 6,
-    icon: <FaStore className="text-3xl text-primary" />,
+    icon: FaStore,
     title: "Armazenamento Temporário",
     description: "Disponibilizamos armazenamento seguro para seus pertences em caso de necessidade durante a mudança."
   }
@@ -55,7 +63,7 @@ const ServicesSection: React.FC = () => {
           {services.map((service) => (
             <div key={service.id} className="bg-white rounded-lg shadow-md p-6 transition-transform hover:-translate-y-1">
               <div className="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                {service.icon}
+                <service.icon className="text-3xl text-primary" />
               </div>
               <h3 className="text-xl font-bold font-heading mb-3">{service.title}</h3>
               <p className="text-[#343A40] mb-4">{service.description}</p>
