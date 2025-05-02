@@ -49,10 +49,13 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             {/* Logo */}
-            <div className="text-2xl font-bold text-primary font-heading flex items-center">
-              <Icons.Run className="text-3xl mr-2" />
-              <span>Papaléguas<span className="text-secondary">Mudanças</span></span>
-            </div>
+            <Link href="/">
+              <img 
+                src={logoPath} 
+                alt="Papaléguas Mudanças" 
+                className="h-12" 
+              />
+            </Link>
           </div>
           
           {/* Desktop Navigation */}
