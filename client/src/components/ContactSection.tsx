@@ -6,7 +6,7 @@ import { insertContactSubmissionSchema } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { useMutation } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
-import { Icons } from "@/lib/icons";
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaFacebookF, FaInstagram, FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
 import {
   Form,
   FormControl,
@@ -193,7 +193,7 @@ const ContactSection: React.FC = () => {
               
               <div className="mb-6">
                 <div className="flex items-start">
-                  <Icons.MapPin className="text-2xl text-primary mr-4 mt-1" />
+                  <FaMapMarkerAlt className="text-2xl text-primary mr-4 mt-1" />
                   <div>
                     <h4 className="font-bold mb-1">Endereço</h4>
                     <p className="text-[#343A40]">
@@ -207,7 +207,7 @@ const ContactSection: React.FC = () => {
               
               <div className="mb-6">
                 <div className="flex items-start">
-                  <Icons.Phone className="text-2xl text-primary mr-4 mt-1" />
+                  <FaPhone className="text-2xl text-primary mr-4 mt-1" />
                   <div>
                     <h4 className="font-bold mb-1">Telefone</h4>
                     <p className="text-[#343A40]">
@@ -220,7 +220,7 @@ const ContactSection: React.FC = () => {
               
               <div className="mb-6">
                 <div className="flex items-start">
-                  <Icons.Mail className="text-2xl text-primary mr-4 mt-1" />
+                  <FaEnvelope className="text-2xl text-primary mr-4 mt-1" />
                   <div>
                     <h4 className="font-bold mb-1">Email</h4>
                     <p className="text-[#343A40]">
@@ -233,7 +233,7 @@ const ContactSection: React.FC = () => {
               
               <div className="mb-6">
                 <div className="flex items-start">
-                  <Icons.Clock className="text-2xl text-primary mr-4 mt-1" />
+                  <FaClock className="text-2xl text-primary mr-4 mt-1" />
                   <div>
                     <h4 className="font-bold mb-1">Horário de Atendimento</h4>
                     <p className="text-[#343A40]">
@@ -248,16 +248,16 @@ const ContactSection: React.FC = () => {
                 <h4 className="font-bold mb-3">Siga-nos nas Redes Sociais</h4>
                 <div className="flex space-x-4">
                   <a href="#" className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors">
-                    <Icons.Facebook />
+                    <FaFacebookF />
                   </a>
                   <a href="#" className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors">
-                    <Icons.Instagram />
+                    <FaInstagram />
                   </a>
                   <a href="#" className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors">
-                    <Icons.Whatsapp />
+                    <FaWhatsapp />
                   </a>
                   <a href="#" className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors">
-                    <Icons.Linkedin />
+                    <FaLinkedinIn />
                   </a>
                 </div>
               </div>
