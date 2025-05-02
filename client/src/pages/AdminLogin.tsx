@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Icons } from "@/lib/icons";
+import { FaRunning } from "react-icons/fa";
 
 const loginSchema = z.object({
   username: z.string().min(1, "Nome de usuário é obrigatório"),
@@ -58,7 +58,7 @@ const AdminLogin: React.FC = () => {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center">
-            <Icons.Run className="h-8 w-8 text-primary mr-2" />
+            <FaRunning className="h-8 w-8 text-primary mr-2" />
             <span className="text-2xl font-bold">Papaléguas<span className="text-secondary">Mudanças</span></span>
           </div>
         </div>

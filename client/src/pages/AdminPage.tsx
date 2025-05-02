@@ -9,7 +9,7 @@ import { TimelineEntry } from "@shared/schema";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Icons } from "@/lib/icons";
+import { FaSignOutAlt, FaPlus, FaEdit } from "react-icons/fa";
 
 const AdminPage: React.FC = () => {
   const { toast } = useToast();
@@ -95,7 +95,7 @@ const AdminPage: React.FC = () => {
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold font-heading">Painel Administrativo</h1>
           <Button variant="outline" onClick={handleLogout}>
-            <Icons.LogOut className="mr-2 h-4 w-4" />
+            <FaSignOutAlt className="mr-2 h-4 w-4" />
             Sair
           </Button>
         </div>
@@ -118,7 +118,7 @@ const AdminPage: React.FC = () => {
                       className="w-full mb-4 bg-primary hover:bg-primary/90" 
                       onClick={handleCreateNewEntry}
                     >
-                      <Icons.Plus className="mr-2 h-4 w-4" />
+                      <FaPlus className="mr-2 h-4 w-4" />
                       Adicionar Novo Evento
                     </Button>
                     
@@ -164,7 +164,7 @@ const AdminPage: React.FC = () => {
                       />
                     ) : (
                       <div className="text-center py-8 text-muted-foreground">
-                        <Icons.Edit className="mx-auto h-12 w-12 mb-4" />
+                        <FaEdit className="mx-auto h-12 w-12 mb-4" />
                         <p>Selecione um evento para editar ou clique em "Adicionar Novo Evento"</p>
                       </div>
                     )}

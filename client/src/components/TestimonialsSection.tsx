@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Icons } from "@/lib/icons";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
@@ -62,10 +62,10 @@ const TestimonialsSection: React.FC = () => {
                   <div className="flex items-center mb-4">
                     <div className="text-primary flex">
                       {[...Array(Math.floor(testimonial.rating))].map((_, i) => (
-                        <Icons.Star key={`star-full-${i}`} className="fill-current" />
+                        <FaStar key={`star-full-${i}`} className="fill-current" />
                       ))}
                       {testimonial.rating % 1 !== 0 && (
-                        <Icons.StarHalf className="fill-current" />
+                        <FaStarHalfAlt className="fill-current" />
                       )}
                     </div>
                   </div>

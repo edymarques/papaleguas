@@ -1,5 +1,5 @@
 import React from "react";
-import { Icons } from "@/lib/icons";
+import { FaRunning, FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="text-2xl font-bold font-heading mb-4 flex items-center">
-              <Icons.Run className="text-3xl mr-2 text-primary" />
+              <FaRunning className="text-3xl mr-2 text-primary" />
               <span>Papaléguas<span className="text-primary">Mudanças</span></span>
             </div>
             <p className="mb-4">Soluções completas para mudanças residenciais e comerciais com segurança, agilidade e profissionalismo.</p>
@@ -41,15 +41,15 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-bold font-heading mb-4">Contato</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <Icons.MapPin className="text-primary mr-3 mt-1" />
+                <FaMapMarkerAlt className="text-primary mr-3 mt-1" />
                 <span>Av. das Mudanças, 1234, Centro, São Paulo - SP</span>
               </li>
               <li className="flex items-start">
-                <Icons.Phone className="text-primary mr-3 mt-1" />
+                <FaPhone className="text-primary mr-3 mt-1" />
                 <span>(11) 5555-5555</span>
               </li>
               <li className="flex items-start">
-                <Icons.Mail className="text-primary mr-3 mt-1" />
+                <FaEnvelope className="text-primary mr-3 mt-1" />
                 <span>contato@papaleguasmudancas.com.br</span>
               </li>
             </ul>
