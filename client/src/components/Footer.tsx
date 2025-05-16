@@ -1,5 +1,6 @@
 import React from "react";
-import { FaRunning, FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaFacebookF, FaInstagram, FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
+import logoPath from "@assets/logo-horizontal.png";
 
 const Footer: React.FC = () => {
   return (
@@ -7,12 +8,30 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="text-2xl font-bold font-heading mb-4 flex items-center">
-              <FaRunning className="text-3xl mr-2 text-primary" />
-              <span>Papaléguas<span className="text-primary">Mudanças</span></span>
+            <div className="mb-6">
+              <img 
+                src={logoPath} 
+                alt="Papaléguas Mudanças" 
+                className="h-14 mb-4 mt-[-10px]" 
+              />
             </div>
             <p className="mb-4">Soluções completas para mudanças residenciais e comerciais com segurança, agilidade e profissionalismo.</p>
             <p>&copy; {new Date().getFullYear()} Papaléguas Mudanças. Todos os direitos reservados.</p>
+            
+            <div className="mt-6 flex space-x-3">
+              <a href="#" className="bg-primary/20 hover:bg-primary text-white w-9 h-9 rounded-full flex items-center justify-center transition-colors">
+                <FaFacebookF size={16} />
+              </a>
+              <a href="#" className="bg-primary/20 hover:bg-primary text-white w-9 h-9 rounded-full flex items-center justify-center transition-colors">
+                <FaInstagram size={16} />
+              </a>
+              <a href="#" className="bg-primary/20 hover:bg-primary text-white w-9 h-9 rounded-full flex items-center justify-center transition-colors">
+                <FaWhatsapp size={16} />
+              </a>
+              <a href="#" className="bg-primary/20 hover:bg-primary text-white w-9 h-9 rounded-full flex items-center justify-center transition-colors">
+                <FaLinkedinIn size={16} />
+              </a>
+            </div>
           </div>
           
           <div>
