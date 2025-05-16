@@ -98,7 +98,11 @@ const Header: React.FC = () => {
                 <img 
                   src={logoPath} 
                   alt="Papaléguas Mudanças" 
-                  className={scrolled ? "h-10 transition-all duration-300" : "h-14 transition-all duration-300"} 
+                  className={`transition-all duration-300 ${
+                    scrolled 
+                      ? "h-10 md:h-10 lg:h-10" 
+                      : "h-10 md:h-12 lg:h-14"
+                  }`}
                 />
               </Link>
             </div>
